@@ -5,42 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VO-Shopen | Kurslitteratur Termin 1</title>
     <style>
-        /* Modern و پزشکی استایل */
         :root { 
             --primary: #2b6cb0; --secondary: #2d3748; --accent: #ff0050; 
             --bg: #f7fafc; --text: #2d3748; --card-bg: #ffffff;
         }
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 0; }
         
-        /* Navigation */
         nav { background: var(--secondary); padding: 1rem 2rem; color: white; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
         nav a { color: #cbd5e0; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: 0.3s; }
         nav a:hover { color: white; }
         .logo { font-size: 1.3rem; font-weight: 800; color: white; }
 
-        /* Hero Section */
         .hero { background: var(--primary); color: white; padding: 60px 20px; text-align: center; }
         .hero h1 { margin: 0; font-size: 2.2rem; }
         .hero p { color: #e2e8f0; font-size: 1rem; margin-top: 10px; opacity: 0.9; max-width: 600px; margin-left: auto; margin-right: auto; }
 
-        /* Product Grid */
-        .container { max-width: 1000px; margin: -30px auto 40px; padding: 0 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-        .product-card { background: var(--card-bg); border-radius: 15px; padding: 25px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05); text-align: center; border: 1px solid #edf2f7; transition: 0.3s; display: flex; flex-direction: column; }
+        .container { max-width: 1200px; margin: -30px auto 40px; padding: 0 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .product-card { background: var(--card-bg); border-radius: 15px; padding: 20px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05); text-align: center; border: 1px solid #edf2f7; transition: 0.3s; display: flex; flex-direction: column; }
         .product-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }
         
-        /* بهینه‌سازی نمایش عکس‌ها */
-        .product-card img { width: 100%; max-width: 140px; height: 190px; object-fit: contain; margin: 0 auto 15px; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); background: #f7fafc; padding: 5px; }
+        .product-card img { width: 100%; max-width: 130px; height: 180px; object-fit: contain; margin: 0 auto 15px; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); background: #f7fafc; padding: 5px; }
         
-        .product-card h3 { margin: 10px 0 5px; font-size: 1.1rem; color: #1a202c; }
-        .product-card p { color: #718096; font-size: 0.85rem; margin: 0 0 15px; flex-grow: 1; line-height: 1.4; }
-        .gy25-badge { background: #fed7d7; color: #9b2c2c; padding: 3px 8px; border-radius: 5px; font-weight: bold; font-size: 0.75rem; display: inline-block; margin-bottom: 10px; }
+        .product-card h3 { margin: 10px 0 5px; font-size: 1rem; color: #1a202c; min-height: 40px; display: flex; align-items: center; justify-content: center; }
+        .product-card p { color: #718096; font-size: 0.8rem; margin: 0 0 15px; flex-grow: 1; line-height: 1.4; }
+        .gy25-badge { background: #fed7d7; color: #9b2c2c; padding: 3px 8px; border-radius: 5px; font-weight: bold; font-size: 0.7rem; display: inline-block; margin-bottom: 10px; }
         
-        /* دکمه تیک‌تاک استایل */
-        .buy-btn { display: block; background: #00f2ea; color: #000; padding: 12px; border-radius: 30px; text-decoration: none; font-weight: bold; font-size: 0.95rem; margin-top: auto; transition: 0.3s; box-shadow: 0 4px 6px rgba(0,242,234,0.2); border: none; cursor: pointer; }
+        .buy-btn { display: block; background: #00f2ea; color: #000; padding: 10px; border-radius: 30px; text-decoration: none; font-weight: bold; font-size: 0.9rem; margin-top: auto; transition: 0.3s; box-shadow: 0 4px 6px rgba(0,242,234,0.2); border: none; }
         .buy-btn:hover { background: var(--accent); color: white; box-shadow: 0 4px 15px rgba(255,0,80,0.4); }
 
         footer { text-align: center; padding: 40px; color: #a0aec0; font-size: 0.75rem; background: var(--secondary); margin-top: 50px; }
-        footer p { margin: 5px 0; }
     </style>
 </head>
 <body>
@@ -52,37 +45,44 @@
 
 <div class="hero">
     <h1>Kurslitteratur Termin 1 📚</h1>
-    <p>Handplockade, obligatoriska böcker för Vård och Omsorg (Gy25) – Vårterminen 2026.</p>
+    <p>Alla 4 obligatoriska böcker för Vård och Omsorg (Gy25) på ett ställe.</p>
 </div>
 
 <div class="container">
     <div class="product-card">
         <img src="medicin_bas.png" alt="Medicin Bas">
         <h3>Medicin Bas</h3>
-        <p>Karin Bellinder <br> 2:a upplagan (2019) <br> Studentlitteratur</p>
-        <a href="لینک_افیلیت_باکوس_شما" class="buy-btn" target="_blank">Se pris på Bokus 🛒</a>
+        <p>Karin Bellinder <br> Studentlitteratur</p>
+        <a href="#" class="buy-btn" target="_blank">Se pris på Bokus 🛒</a>
     </div>
 
     <div class="product-card">
         <img src="social_omsorg.png" alt="Social omsorg">
-        <div class="gy25-badge">Gy25 Kompatibel</div>
+        <div class="gy25-badge">Gy25</div>
         <h3>Social omsorg 1 & 2</h3>
-        <p>Nina Bodén, Eva Wedman & Helena Bäck <br> 1:a upplagan (2025) <br> Liber</p>
-        <a href="لینک_افیلیت_لیبر_شما" class="buy-btn" target="_blank">Se pris på Liber 🛒</a>
+        <p>Nina Bodén m.fl. <br> Liber</p>
+        <a href="#" class="buy-btn" target="_blank">Se pris på Liber 🛒</a>
     </div>
 
     <div class="product-card">
         <img src="gerontologi.png" alt="Gerontologi">
-        <div class="gy25-badge">Gy25 Kompatibel</div>
+        <div class="gy25-badge">Gy25</div>
         <h3>Gerontologi & Geriatrik 1</h3>
-        <p>Kristina Iritz Hedberg, Wallis Jansson & Britt Almberg <br> 1:a upplagan (2025) <br> Liber</p>
-        <a href="لینک_افیلیت_لیبر_شما" class="buy-btn" target="_blank">Se pris på Liber 🛒</a>
+        <p>Kristina Iritz Hedberg <br> Liber</p>
+        <a href="#" class="buy-btn" target="_blank">Se pris på Liber 🛒</a>
+    </div>
+
+    <div class="product-card">
+        <img src="funktionsformaga.png" alt="Funktionsförmåga">
+        <div class="gy25-badge">Gy25</div>
+        <h3>Funktionsförmåga 1 & 2</h3>
+        <p>Emma Leifler m.fl. <br> Liber</p>
+        <a href="#" class="buy-btn" target="_blank">Se pris på Liber 🛒</a>
     </div>
 </div>
 
 <footer>
-    <p>© 2026 VO-Shopen - En del av underskoterskavok252 studieportal.</p>
-    <p>Sidan innehåller annonslänkar (Affiliate).</p>
+    <p>© 2026 VO-Shopen - Innehåller annonslänkar (Affiliate).</p>
 </footer>
 
 </body>
