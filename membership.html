@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VO-Akademin | Din framtid inom Vård och Omsorg</title>
+    <style>
+        :root {
+            --primary: #2b6cb0; --secondary: #4299e1; --accent: #f56565;
+            --bg: #f7fafc; --white: #ffffff;
+        }
+        body { font-family: 'Inter', -apple-system, sans-serif; background: var(--bg); color: #2d3748; margin: 0; }
+        
+        /* Hero Section */
+        .hero { 
+            background: linear-gradient(rgba(43, 108, 176, 0.9), rgba(43, 108, 176, 0.9)), 
+                        url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover; background-position: center;
+            color: white; padding: 100px 20px; text-align: center;
+        }
+        .hero h1 { font-size: 2.8rem; margin-bottom: 20px; }
+        .hero p { font-size: 1.2rem; max-width: 600px; margin: 0 auto 30px; opacity: 0.9; }
+
+        /* Form Box */
+        .optin-box { 
+            background: var(--white); max-width: 500px; margin: -50px auto 50px; 
+            padding: 40px; border-radius: 15px; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .optin-box h2 { color: var(--primary); margin-top: 0; }
+        input[type="email"] { 
+            width: 100%; padding: 15px; margin: 15px 0; border: 2px solid #e2e8f0; 
+            border-radius: 10px; font-size: 1rem; box-sizing: border-box;
+        }
+        .cta-btn { 
+            background: var(--accent); color: white; padding: 15px 30px; border: none; 
+            border-radius: 10px; font-size: 1.1rem; font-weight: bold; cursor: pointer; 
+            width: 100%; transition: 0.3s;
+        }
+        .cta-btn:hover { background: #e53e3e; transform: translateY(-2px); }
+
+        /* Features Section */
+        .features { max-width: 1000px; margin: 50px auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 20px; }
+        .feature-card { background: white; padding: 30px; border-radius: 12px; text-align: center; }
+        .feature-card i { font-size: 2rem; color: var(--secondary); }
+
+        footer { text-align: center; padding: 40px; color: #718096; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <h1>Klara din VO-utbildning med glans 🚀</h1>
+    <p>Gå med i 500+ studenter som får veckans viktigaste begrepp, sammanfattningar och provtips direkt i mejlen.</p>
+</div>
+
+<div class="optin-box">
+    <h2>Få gratis Studieguide (PDF)</h2>
+    <p>Ange din e-post för att få vår populära guide för Termin 1.</p>
+    
+    <form action="https://formspree.io/f/YOUR_ID" method="POST">
+        <input type="email" name="email" placeholder="Din bästa e-postadress..." required>
+        <button type="submit" class="cta-btn">JA, SKICKA GUIDEN! 📩</button>
+    </form>
+    
+    <p style="font-size: 0.8rem; color: #a0aec0; margin-top: 15px;">Vi hatar spam. Du kan avbryta när som helst.</p>
+</div>
+
+<div class="features">
+    <div class="feature-card">
+        <h3>🎯 Riktade Begrepp</h3>
+        <p>Vi bryter ner de svåraste medicinska termerna till enkel svenska.</p>
+    </div>
+    <div class="feature-card">
+        <h3>📝 Provförberedelser</h3>
+        <p>Exklusiva quiz och övningar som liknar de riktiga nationella proven.</p>
+    </div>
+    <div class="feature-card">
+        <h3>⏰ Spara Tid</h3>
+        <p>Sluta leta i tunga böcker. Vi ger dig de viktigaste sammanfattningarna.</p>
+    </div>
+</div>
+
+<footer>
+    © 2026 VO-Akademin Sverige <br>
+    Stärk din karriär inom vård och omsorg.
+</footer>
+
+</body>
+</html>
