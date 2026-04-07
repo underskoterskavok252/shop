@@ -3,86 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VO-Shopen | Kurslitteratur Termin 1</title>
+    <title>VO-Guiden | Allt för din vårdutbildning</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { 
-            --primary: #2b6cb0; --secondary: #2d3748; --accent: #ff0050; 
-            --bg: #f7fafc; --text: #2d3748; --card-bg: #ffffff;
-        }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 0; }
-        
-        nav { background: var(--secondary); padding: 1rem 2rem; color: white; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        nav a { color: #cbd5e0; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: 0.3s; }
-        nav a:hover { color: white; }
-        .logo { font-size: 1.3rem; font-weight: 800; color: white; }
-
-        .hero { background: var(--primary); color: white; padding: 60px 20px; text-align: center; }
-        .hero h1 { margin: 0; font-size: 2.2rem; }
-        .hero p { color: #e2e8f0; font-size: 1rem; margin-top: 10px; opacity: 0.9; max-width: 600px; margin-left: auto; margin-right: auto; }
-
-        .container { max-width: 1200px; margin: -30px auto 40px; padding: 0 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-        .product-card { background: var(--card-bg); border-radius: 15px; padding: 20px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05); text-align: center; border: 1px solid #edf2f7; transition: 0.3s; display: flex; flex-direction: column; }
-        .product-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }
-        
-        .product-card img { width: 100%; max-width: 130px; height: 180px; object-fit: contain; margin: 0 auto 15px; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); background: #f7fafc; padding: 5px; }
-        
-        .product-card h3 { margin: 10px 0 5px; font-size: 1rem; color: #1a202c; min-height: 40px; display: flex; align-items: center; justify-content: center; }
-        .product-card p { color: #718096; font-size: 0.8rem; margin: 0 0 15px; flex-grow: 1; line-height: 1.4; }
-        .gy25-badge { background: #fed7d7; color: #9b2c2c; padding: 3px 8px; border-radius: 5px; font-weight: bold; font-size: 0.7rem; display: inline-block; margin-bottom: 10px; }
-        
-        .buy-btn { display: block; background: #00f2ea; color: #000; padding: 10px; border-radius: 30px; text-decoration: none; font-weight: bold; font-size: 0.9rem; margin-top: auto; transition: 0.3s; box-shadow: 0 4px 6px rgba(0,242,234,0.2); border: none; }
-        .buy-btn:hover { background: var(--accent); color: white; box-shadow: 0 4px 15px rgba(255,0,80,0.4); }
-
-        footer { text-align: center; padding: 40px; color: #a0aec0; font-size: 0.75rem; background: var(--secondary); margin-top: 50px; }
+        :root { --blue: #2c5282; --light-blue: #ebf8ff; --accent: #d53f8c; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #2d3748; background: #f7fafc; margin: 0; }
+        header { background: var(--blue); color: white; padding: 40px 20px; text-align: center; }
+        .nav-links { background: #1a365d; padding: 10px; text-align: center; }
+        .nav-links a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; font-size: 0.9rem; }
+        .container { max-width: 1000px; margin: 20px auto; padding: 20px; }
+        .info-section { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 30px; border-left: 5px solid var(--blue); }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px; }
+        .book-card { background: white; padding: 20px; border-radius: 12px; text-align: center; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; }
+        .book-card img { width: 100%; max-height: 180px; object-fit: contain; margin-bottom: 15px; }
+        .btn { display: inline-block; background: var(--accent); color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-top: 10px; width: 80%; }
+        .term-list { background: #edf2f7; padding: 20px; border-radius: 10px; margin-top: 40px; }
     </style>
 </head>
 <body>
 
-<nav>
-    <div class="logo">VO-Shopen ✨</div>
-    <a href="https://underskoterskavok252.github.io/Begreppslista-vecka-15/">⬅️ Tillbaka till studier</a>
-</nav>
+<header>
+    <h1>VO-Guiden Sverige 🇸🇪</h1>
+    <p>Din resurssida för Vård- och omsorgsprogrammet (Gy25)</p>
+</header>
 
-<div class="hero">
-    <h1>Kurslitteratur Termin 1 📚</h1>
-    <p>Alla 4 obligatoriska böcker för Vård och Omsorg (Gy25) på ett ställe.</p>
+<div class="nav-links">
+    <a href="https://underskoterskavok252.github.io/Begreppslista-vecka-15/">STUDIEMATERIAL</a>
+    <a href="#">KURSBOOKS-GUIDE</a>
+    <a href="mailto:underskoterskavok252@gmail.com">KONTAKT</a>
 </div>
 
 <div class="container">
-    <div class="product-card">
-        <img src="medicin_bas.png" alt="Medicin Bas">
-        <h3>Medicin Bas</h3>
-        <p>Karin Bellinder <br> Studentlitteratur</p>
-        <a href="#" class="buy-btn" target="_blank">Se pris på Bokus 🛒</a>
+    <section class="info-section">
+        <h2>Välkommen till din studieportal!</h2>
+        <p>Vi hjälper studenter som läser till undersköterska att hitta rätt studiematerial och kurslitteratur. Här hittar du de viktigaste böckerna för de nya kurserna inom <b>Gy25</b>.</p>
+    </section>
+
+    <h2 style="text-align: center;">Obligatorisk Kurslitteratur - Termin 1</h2>
+    <div class="grid">
+        <div class="book-card">
+            <img src="medicin_bas.webp" alt="Medicin Bas">
+            <h4>Medicin Bas</h4>
+            <a href="https://www.bokus.com" class="btn">Visa hos Bokus</a>
+        </div>
+        <div class="book-card">
+            <img src="social_omsorg.webp" alt="Social omsorg">
+            <h4>Social omsorg 1 & 2</h4>
+            <a href="https://www.bokus.com" class="btn">Visa hos Bokus</a>
+        </div>
+        <div class="book-card">
+            <img src="gerontologi-och-geriatrik-niva-1.jpg" alt="Gerontologi">
+            <h4>Gerontologi 1</h4>
+            <a href="https://www.bokus.com" class="btn">Visa hos Bokus</a>
+        </div>
+        <div class="book-card">
+            <img src="Funktionsförmåga.jpg" alt="Funktionsförmåga">
+            <h4>Funktionsförmåga</h4>
+            <a href="https://www.bokus.com" class="btn">Visa hos Bokus</a>
+        </div>
     </div>
 
-    <div class="product-card">
-        <img src="social_omsorg.png" alt="Social omsorg">
-        <div class="gy25-badge">Gy25</div>
-        <h3>Social omsorg 1 & 2</h3>
-        <p>Nina Bodén m.fl. <br> Liber</p>
-        <a href="#" class="buy-btn" target="_blank">Se pris på Liber 🛒</a>
-    </div>
-
-    <div class="product-card">
-        <img src="gerontologi.png" alt="Gerontologi">
-        <div class="gy25-badge">Gy25</div>
-        <h3>Gerontologi & Geriatrik 1</h3>
-        <p>Kristina Iritz Hedberg <br> Liber</p>
-        <a href="#" class="buy-btn" target="_blank">Se pris på Liber 🛒</a>
-    </div>
-
-    <div class="product-card">
-        <img src="funktionsformaga.png" alt="Funktionsförmåga">
-        <div class="gy25-badge">Gy25</div>
-        <h3>Funktionsförmåga 1 & 2</h3>
-        <p>Emma Leifler m.fl. <br> Liber</p>
-        <a href="#" class="buy-btn" target="_blank">Se pris på Liber 🛒</a>
-    </div>
+    <section class="term-list">
+        <h3>💡 Viktiga begrepp för vårdstudenter (Vecka 1)</h3>
+        <ul style="column-count: 2;">
+            <li><b>Anatomi</b> - Läran om kroppens uppbyggnad</li>
+            <li><b>Fysiologi</b> - Läran om kroppens funktioner</li>
+            <li><b>Patologi</b> - Läran om sjukdomar</li>
+            <li><b>Etik</b> - Regler för rätt och fel i vården</li>
+            <li><b>Empati</b> - Förmågan att förstå andras känslor</li>
+            <li><b>Hygiene</b> - Förebyggande av smittspridning</li>
+        </ul>
+    </section>
 </div>
 
-<footer>
-    <p>© 2026 VO-Shopen - Innehåller annonslänkar (Affiliate).</p>
+<footer style="text-align: center; padding: 40px; color: #718096; font-size: 0.8rem;">
+    <p>© 2026 VO-Guiden | Kontakt: underskoterskavok252@gmail.com</p>
 </footer>
 
 </body>
