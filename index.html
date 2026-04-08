@@ -3,81 +3,204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VO-Guiden | Allt för din vårdutbildning</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>VO-Guiden | Din expert på vårdlitteratur Gy25</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        :root { --blue: #2c5282; --light-blue: #ebf8ff; --accent: #d53f8c; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #2d3748; background: #f7fafc; margin: 0; }
-        header { background: var(--blue); color: white; padding: 40px 20px; text-align: center; }
-        .nav-links { background: #1a365d; padding: 10px; text-align: center; }
-        .nav-links a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; font-size: 0.9rem; }
-        .container { max-width: 1000px; margin: 20px auto; padding: 20px; }
-        .info-section { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 30px; border-left: 5px solid var(--blue); }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px; }
-        .book-card { background: white; padding: 20px; border-radius: 12px; text-align: center; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; }
-        .book-card img { width: 100%; max-height: 180px; object-fit: contain; margin-bottom: 15px; }
-        .btn { display: inline-block; background: var(--accent); color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-top: 10px; width: 80%; }
-        .term-list { background: #edf2f7; padding: 20px; border-radius: 10px; margin-top: 40px; }
+        :root {
+            --primary-dark: #1a365d;
+            --primary-color: #2b6cb0;
+            --accent-color: #ed64a6;
+            --bg-soft: #f4f7f9;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            margin: 0;
+            background-color: var(--bg-soft);
+            color: #333;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+            color: var(--white);
+            padding: 60px 20px;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+        }
+
+        nav {
+            background: var(--white);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo { font-weight: 800; font-size: 1.5rem; color: var(--primary-color); }
+
+        /* Main Container */
+        .wrapper { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+
+        /* Expert Box */
+        .expert-notice {
+            background: #eef2ff;
+            border-left: 6px solid var(--primary-color);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        /* Product Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover { transform: translateY(-10px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }
+
+        .card-img-container {
+            background: #fff;
+            padding: 30px;
+            text-align: center;
+            height: 250px;
+        }
+
+        .card-img-container img {
+            max-width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .card-content { padding: 25px; flex-grow: 1; }
+        
+        .badge {
+            background: #edf2f7;
+            color: #4a5568;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .price-btn {
+            display: block;
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 12px;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        .price-btn:hover { background: var(--primary-dark); }
+
+        /* Review Section */
+        .review-text { font-size: 0.9rem; color: #718096; margin-top: 15px; font-style: italic; }
+
+        footer { background: var(--primary-dark); color: white; padding: 50px 20px; text-align: center; margin-top: 80px; }
     </style>
 </head>
 <body>
 
+<nav>
+    <div class="logo">VO-GUIDEN <span style="color: var(--accent-color);">.</span></div>
+    <div class="menu">
+        <a href="https://underskoterskavok252.github.io/Begreppslista-vecka-15/" style="text-decoration: none; font-weight: bold; color: var(--primary-color);">Plugghjälp</a>
+    </div>
+</nav>
+
 <header>
-    <h1>VO-Guiden Sverige 🇸🇪</h1>
-    <p>Din resurssida för Vård- och omsorgsprogrammet (Gy25)</p>
+    <h1>Hitta rätt kurslitteratur för Gy25</h1>
+    <p>Vi jämför priser och hjälper dig att välja rätt böcker för Vård och Omsorg</p>
 </header>
 
-<div class="nav-links">
-    <a href="https://underskoterskavok252.github.io/Begreppslista-vecka-15/">STUDIEMATERIAL</a>
-    <a href="#">KURSBOOKS-GUIDE</a>
-    <a href="mailto:underskoterskavok252@gmail.com">KONTAKT</a>
-</div>
-
-<div class="container">
-    <section class="info-section">
-        <h2>Välkommen till din studieportal!</h2>
-        <p>Vi hjälper studenter som läser till undersköterska att hitta rätt studiematerial och kurslitteratur. Här hittar du de viktigaste böckerna för de nya kurserna inom <b>Gy25</b>.</p>
-    </section>
-
-    <h2 style="text-align: center;">Obligatorisk Kurslitteratur - Termin 1</h2>
-    <div class="grid">
-        <div class="book-card">
-            <img src="medicin_bas.png" alt="Medicin Bas">
-            <h4>Medicin Bas</h4>
-            <a href="https://www.bokus.com" class="btn">Visa hos Bokus</a>
-        </div>
-        <div class="book-card">
-            <img src="social_omsorg.png" alt="Social omsorg">
-            <h4>Social omsorg 1 & 2</h4>
-            <a href="https://www.bokus.com" class="btn">Visa hos Bokus</a>
-        </div>
-        <div class="book-card">
-            <img src="gerontologi.png" alt="Gerontologi">
-            <h4>Gerontologi 1</h4>
-            <a href="https://www.bokus.com" class="btn">Visa hos Bokus</a>
-        </div>
-        <div class="book-card">
-            <img src="funktionsformaga.png" alt="Funktionsförmåga">
-            <h4>Funktionsförmåga</h4>
-            <a href="https://www.bokus.com" class="btn">Visa hos Bokus</a>
+<div class="wrapper">
+    <div class="expert-notice">
+        <i class="fas fa-user-md fa-3x" style="color: var(--primary-color);"></i>
+        <div>
+            <strong>Varför lita på oss?</strong>
+            <p style="margin: 5px 0 0; font-size: 0.9rem;">Vi är specialiserade på det nya vårdprogrammet Gy25. Alla böcker på denna sida är verifierade kurskrav för termin 1.</p>
         </div>
     </div>
 
-    <section class="term-list">
-        <h3>💡 Viktiga begrepp för vårdstudenter (Vecka 1)</h3>
-        <ul style="column-count: 2;">
-            <li><b>Anatomi</b> - Läran om kroppens uppbyggnad</li>
-            <li><b>Fysiologi</b> - Läran om kroppens funktioner</li>
-            <li><b>Patologi</b> - Läran om sjukdomar</li>
-            <li><b>Etik</b> - Regler för rätt och fel i vården</li>
-            <li><b>Empati</b> - Förmågan att förstå andras känslor</li>
-            <li><b>Hygiene</b> - Förebyggande av smittspridning</li>
-        </ul>
-    </section>
+    <div class="grid">
+        <div class="card">
+            <div class="card-img-container">
+                <img src="medicin_bas.png" alt="Medicin Bas">
+            </div>
+            <div class="card-content">
+                <span class="badge">Nivå 1</span>
+                <h3>Medicin Bas</h3>
+                <p class="review-text">"En grundläggande bok för dig som vill förstå kroppens anatomi och fysiologi på ett pedagogiskt sätt."</p>
+                <a href="https://www.bokus.com" class="price-btn"><i class="fas fa-shopping-cart"></i> Se lägsta pris</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img-container">
+                <img src="social_omsorg.png" alt="Social omsorg">
+            </div>
+            <div class="card-content">
+                <span class="badge">Nivå 1 & 2</span>
+                <h3>Social omsorg 1 & 2</h3>
+                <p class="review-text">"Täcker allt från etik till praktiskt arbete inom socialtjänsten. Ett måste för VO-programmet."</p>
+                <a href="https://www.bokus.com" class="price-btn"><i class="fas fa-shopping-cart"></i> Se lägsta pris</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img-container">
+                <img src="gerontologi.png" alt="Gerontologi">
+            </div>
+            <div class="card-content">
+                <span class="badge">Nivå 1</span>
+                <h3>Gerontologi 1</h3>
+                <p class="review-text">"Fokuserar på det friska åldrandet och de vanligaste sjukdomarna hos äldre. Mycket aktuell för Gy25."</p>
+                <a href="https://www.bokus.com" class="price-btn"><i class="fas fa-shopping-cart"></i> Se lägsta pris</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img-container">
+                <img src="funktionsformaga.png" alt="Funktionsförmåga">
+            </div>
+            <div class="card-content">
+                <span class="badge">Nivå 1 & 2</span>
+                <h3>Funktionsförmåga 1 & 2</h3>
+                <p class="review-text">"Lär dig om funktionsnedsättningar och hur man stöttar individer till ett självständigt liv."</p>
+                <a href="https://www.bokus.com" class="price-btn"><i class="fas fa-shopping-cart"></i> Se lägsta pris</a>
+            </div>
+        </div>
+    </div>
 </div>
 
-<footer style="text-align: center; padding: 40px; color: #718096; font-size: 0.8rem;">
-    <p>© 2026 VO-Guiden | Kontakt: underskoterskavok252@gmail.com</p>
+<footer>
+    <p><strong>VO-Guiden Sverige</strong></p>
+    <p style="opacity: 0.7; font-size: 0.8rem;">Denna sida innehåller annonslänkar för att stödja driften av studieportalen.<br>Kontakt: underskoterskavok252@gmail.com</p>
 </footer>
 
 </body>
