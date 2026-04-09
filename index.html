@@ -19,17 +19,10 @@
             margin: 0;
             background-color: var(--bg-soft);
             color: #333;
+            line-height: 1.6;
         }
 
-        /* Header & Navigation */
-        header {
-            background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
-            color: var(--white);
-            padding: 60px 20px;
-            text-align: center;
-            clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
-        }
-
+        /* Navigation */
         nav {
             background: var(--white);
             padding: 15px 5%;
@@ -42,10 +35,23 @@
             z-index: 1000;
         }
 
-        .logo { font-weight: 800; font-size: 1.5rem; color: var(--primary-color); }
+        .logo { font-weight: 800; font-size: 1.5rem; color: var(--primary-color); text-decoration: none; }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+            color: var(--white);
+            padding: 60px 20px;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+        }
 
         /* Main Container */
-        .wrapper { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+        .wrapper { max-width: 1100px; margin: 0 auto; padding: 20px 20px 60px; }
+
+        .back-btn-container {
+            margin-bottom: 20px;
+        }
 
         .expert-notice {
             background: #eef2ff;
@@ -58,6 +64,7 @@
             gap: 20px;
         }
 
+        /* Product Grid */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -104,7 +111,7 @@
         .price-btn {
             display: block;
             background: var(--primary-color);
-            color: white;
+            color: white !important;
             text-align: center;
             padding: 15px;
             text-decoration: none;
@@ -116,32 +123,37 @@
 
         .price-btn:hover { background: var(--primary-dark); }
 
-        footer { background: var(--primary-dark); color: white; padding: 50px 20px; text-align: center; margin-top: 80px; }
-        
-        /* Style for Back Button */
-        .back-btn-container {
-            max-width: 1100px;
-            margin: 20px auto 0;
-            padding: 0 20px;
+        /* Form */
+        .contact-section {
+            margin-top: 60px;
+            background: #fff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #cbd5e0;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        footer { background: var(--primary-dark); color: white; padding: 50px 20px; text-align: center; margin-top: 80px; }
     </style>
 </head>
 <body>
 
 <nav>
-    <div class="logo">VO-GUIDEN <span style="color: var(--accent-color);">.</span></div>
+    <a href="https://underskoterskavok252.github.io/Begreppslista/index.html" class="logo">VO-GUIDEN <span style="color: var(--accent-color);">.</span></a>
     <div class="menu">
-        <a href="Begreppslista-v15.html" style="text-decoration: none; font-weight: bold; color: var(--primary-color);">
+        <a href="https://underskoterskavok252.github.io/Begreppslista/Begreppslista-v15.html" style="text-decoration: none; font-weight: bold; color: var(--primary-color);">
             <i class="fas fa-book-reader"></i> Plugghjälp
         </a>
     </div>
 </nav>
-
-<div class="back-btn-container">
-    <a href="index.html" class="btn" style="background-color: #4a5568; color: white; text-decoration: none; padding: 10px 20px; border-radius: 8px; display: inline-flex; align-items: center; gap: 8px; font-weight: 600;">
-        <i class="fas fa-arrow-left"></i> Tillbaka till Start
-    </a>
-</div>
 
 <header>
     <h1>Hitta rätt kurslitteratur för Gy25</h1>
@@ -149,11 +161,17 @@
 </header>
 
 <div class="wrapper">
+    <div class="back-btn-container">
+        <a href="https://underskoterskavok252.github.io/Begreppslista/index.html" style="background-color: #4a5568; color: white; text-decoration: none; padding: 10px 20px; border-radius: 8px; display: inline-flex; align-items: center; gap: 8px; font-weight: 600;">
+            <i class="fas fa-arrow-left"></i> Tillbaka till Start
+        </a>
+    </div>
+
     <div class="expert-notice">
         <i class="fas fa-user-md fa-3x" style="color: var(--primary-color);"></i>
         <div>
             <strong>Varför lita på oss?</strong>
-            <p style="margin: 5px 0 0; font-size: 0.9rem;">Vi är specialiserade på det nya vårdprogrammet Gy25. Alla böcker på denna sida är verifierade kurskrav för termin 1.</p>
+            <p style="margin: 5px 0 0; font-size: 0.9rem;">Vi är specialiserade på det nya vårdprogrammet Gy25. Alla böcker på denna sida är verifierade kurskrav.</p>
         </div>
     </div>
 
@@ -169,30 +187,49 @@
                 <a href="https://www.bokus.com" class="price-btn"><i class="fas fa-shopping-cart"></i> Se lägsta pris</a>
             </div>
         </div>
+
+        <div class="card">
+            <div class="card-img-container">
+                <img src="social_omsorg.png" alt="Social omsorg">
+            </div>
+            <div class="card-content">
+                <span class="badge">Nivå 1 & 2</span>
+                <h3>Social omsorg 1 & 2</h3>
+                <p style="font-size: 0.9rem; color: #718096; margin-top: 15px; font-style: italic;">"Täcker allt från etik till praktiskt arbete inom socialtjänsten. Ett måste för VO-programmet."</p>
+                <a href="https://www.bokus.com" class="price-btn"><i class="fas fa-shopping-cart"></i> Se lägsta pris</a>
+            </div>
         </div>
+    </div>
 
     <section style="margin-top: 60px; background: white; padding: 40px; border-radius: 20px; border: 1px solid #e2e8f0;">
         <h2 style="text-align: center; color: var(--primary-dark); margin-bottom: 30px;">Vanliga frågor om Gy25-litteratur</h2>
         <div style="margin-bottom: 20px; border-bottom: 1px solid #edf2f7; padding-bottom: 15px;">
             <strong style="display: block; color: var(--primary-color); font-size: 1.1rem;">Behöver jag köpa alla böcker direkt?</strong>
-            <p style="margin-top: 5px; color: #4a5568;">Vi rekommenderار که از Medicin Bas شروع کنید.</p>
+            <p style="margin-top: 5px; color: #4a5568;">Vi rekommenderar att du börjar med Medicin Bas و Social Omsorg، då dessa är centrala i termin 1.</p>
+        </div>
+        <div style="margin-bottom: 20px;">
+            <strong style="display: block; color: var(--primary-color); font-size: 1.1rem;">Vad är skillnaden på Gy25 och gamla böcker?</strong>
+            <p style="margin-top: 5px; color: #4a5568;">Gy25 följer den nya läroplanen med nivåindelning som krävs från och med 2025.</p>
         </div>
     </section>
 
-    <div style="margin-top: 50px;">
-        <h3 style="text-align: center; color: var(--primary-dark);">Har du frågor?</h3>
-        <form action="https://formspree.io/f/xdapjzeg" method="POST" style="display: flex; flex-direction: column; gap: 15px; max-width: 500px; margin: 0 auto;">
-            <input type="text" name="name" placeholder="Ditt namn" required style="padding: 12px; border-radius: 8px; border: 1px solid #cbd5e0;">
-            <input type="email" name="_replyto" placeholder="Din e-post" required style="padding: 12px; border-radius: 8px; border: 1px solid #cbd5e0;">
-            <textarea name="message" rows="4" placeholder="Har du förslag یا بازخورد؟" required style="padding: 12px; border-radius: 8px; border: 1px solid #cbd5e0;"></textarea>
-            <button type="submit" style="background: var(--accent-color); color: white; padding: 12px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer;">Skicka förslag</button>
+    <div class="contact-section">
+        <h3 style="text-align: center; color: var(--primary-dark); margin-bottom: 25px;">Har du frågor om litteratur?</h3>
+        <form action="https://formspree.io/f/xdapjzeg" method="POST" style="max-width: 500px; margin: 0 auto;">
+            <input type="text" name="name" placeholder="Ditt namn" required>
+            <input type="email" name="_replyto" placeholder="Din e-post" required>
+            <textarea name="message" rows="4" placeholder="Skriv ditt meddelande här..." required></textarea>
+            <button type="submit" style="width: 100%; background: var(--accent-color); color: white; padding: 15px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; transition: 0.3s;">Skicka meddelande</button>
         </form>
     </div>
 </div>
 
 <footer>
     <p><strong>VO-Guiden Sverige</strong></p>
-    <p style="opacity: 0.7; font-size: 0.8rem;">Denna sida innehåller annonslänkar för att stödja driften av studieportalen.<br>Kontakt: underskoterskavok252@gmail.com</p>
+    <p style="opacity: 0.7; font-size: 0.8rem; line-height: 1.5;">
+        Denna sida innehåller annonslänkar för att stödja driften av studieportalen.<br>
+        © 2026 VO-Guiden | Kontakt: underskoterskavok252@gmail.com
+    </p>
 </footer>
 
 </body>
